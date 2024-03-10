@@ -1,0 +1,300 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+ 
+ 
+* {
+    margin: 0;
+    padding: 0;
+}
+ 
+html {
+    height: 100%;
+    background: #acc0bb;
+    background: -webkit-linear-gradient(to left, #a0a8a8, #033a2e); /* Chrome 10-25, Safari 5.1-6 */
+}
+ 
+body {
+    font-family: montserrat, arial, verdana;
+    background: transparent;
+}
+ 
+ 
+#msform {
+    text-align: center;
+    position: relative;
+    margin-top: 30px;
+}
+ 
+#msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 0px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 10%;
+ 
+    position: relative;
+}
+ 
+ 
+#msform fieldset:not(:first-of-type) {
+    display: none;
+}
+ 
+#msform input, #msform textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 13px;
+}
+ 
+#msform input:focus, #msform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border:  #2D9596;
+    outline-width: 0;
+    transition: All 0.5s ease-in;
+    -webkit-transition: All 0.5s ease-in;
+    -moz-transition: All 0.5s ease-in;
+    -o-transition: All 0.5s ease-in;
+}
+ 
+/*buttons*/
+#msform .action-button {
+    width: 100px;
+    background: #2D9596;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 10px 5px;
+}
+ 
+#msform .next-button {
+    width: 100px;
+    background: #2D9596;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 10px 5px;
+}
+#msform .download-button {
+    width: 100px;
+    background: #2D9596;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 10px 5px;
+}
+.url-container {
+    max-height: 400px; /* Set the maximum height of the container */
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    margin-top: 35px;
+  }
+/* Styles for the list container */
+.url-list {
+    list-style-type: none;
+    padding: 0;
+   
+  }
+ 
+  /* Styles for each URL item */
+  .url-item {
+    margin-bottom: 10px;
+  }
+ 
+  /* Styles for the anchor tag */
+  .url-link {
+    color: rgba(3, 3, 22, 0.637);
+    text-decoration: underline;
+    cursor: pointer;
+  }
+ 
+  /* Hover effect for the anchor tag */
+  .url-link:hover {
+    color: darkblue;
+  }
+ 
+/* CSS for the scraped URLs section */
+.scraped-urls-container {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+ 
+  .scraped-urls-header {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+ 
+  .scraped-urls-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+ 
+  .scraped-urls-list-item {
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+ 
+  .scraped-urls-list-item:hover {
+    background-color: #f0f0f0;
+  }
+ 
+  .scraped-urls-list-item a {
+    color: #007bff;
+    text-decoration: none;
+  }
+ 
+  .scraped-urls-list-item a:hover {
+    text-decoration: underline;
+  }
+ 
+ 
+#msform .next.action-button {
+    float: right; /* Position on the right */
+}
+#msform .download.action-button {
+    float: left; /* Position on the left */
+    margin-left: 10px; /* Add some margin for spacing */
+}
+#msform .action-button:hover, #msform .action-button:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #2D9596;
+}
+ 
+#msform .action-button-previous {
+    width: 100px;
+    background: #C5C5F1;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+ 
+#msform .action-button-previous:hover, #msform .action-button-previous:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #C5C5F1;
+}
+ 
+ 
+.fs-title {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+ 
+.fs-subtitle {
+    font-weight: normal;
+    font-size: 13px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+ 
+/*progressbar*/
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+   
+    counter-reset: step;
+}
+ 
+#progressbar li {
+    list-style-type: none;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    font-size: 9px;
+    width: 33.33%;
+    float: left;
+    position: relative;
+    letter-spacing: 1px;
+}
+ 
+
+
+#progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 24px;
+    height: 24px;
+    line-height: 26px;
+    display: block;
+    font-size: 12px;
+    color: #333;
+    background: white;
+    border-radius: 25px;
+    margin: 0 auto 10px auto;
+}
+ 
+ 
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #f6f7f6;
+    position: absolute;
+    left: -50%;
+    top: 9px;
+    z-index: -1;
+}
+
+
+
+#progressbar li:first-child:after {
+    background: #49d744;
+    content: none;
+}
+ 
+ 
+#progressbar li.active:before, #progressbar li.active:after {
+    background: #49d744;
+    color: white;
+}
+ 
+ 
+.dme_link {
+    margin-top: 30px;
+    text-align: center;
+}
+.dme_link a {
+    background: #FFF;
+    font-weight: bold;
+    color: #F1FADA;
+    border: 0 none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 5px 25px;
+    font-size: 12px;
+}
+ 
+.dme_link a:hover, .dme_link a:focus {
+    background: #C5C5F1;
+    text-decoration: none;
+}
