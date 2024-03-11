@@ -1,29 +1,31 @@
+
+
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
- 
- 
+
+
 * {
     margin: 0;
     padding: 0;
 }
- 
+
 html {
     height: 100%;
-    background: #acc0bb;
-    background: -webkit-linear-gradient(to left, #a0a8a8, #033a2e); /* Chrome 10-25, Safari 5.1-6 */
+    background: #DCF2F1; 
+    background: -webkit-linear-gradient(to left, #DCF2F1, #033a2e); /* Chrome 10-25, Safari 5.1-6 */
 }
- 
+
 body {
     font-family: montserrat, arial, verdana;
     background: transparent;
 }
- 
- 
+
+
 #msform {
     text-align: center;
     position: relative;
     margin-top: 30px;
 }
- 
+
 #msform fieldset {
     background: white;
     border: 0 none;
@@ -33,54 +35,54 @@ body {
     box-sizing: border-box;
     width: 80%;
     margin: 0 10%;
- 
+
     position: relative;
 }
- 
- 
+
+
 #msform fieldset:not(:first-of-type) {
     display: none;
 }
- 
+
 #msform input, #msform textarea {
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 0px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     width: 100%;
     box-sizing: border-box;
     font-family: montserrat;
     color: #2C3E50;
     font-size: 13px;
 }
- 
+
 #msform input:focus, #msform textarea:focus {
     -moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
-    border:  #2D9596;
+    border: 1px solid #365486;
     outline-width: 0;
     transition: All 0.5s ease-in;
     -webkit-transition: All 0.5s ease-in;
     -moz-transition: All 0.5s ease-in;
     -o-transition: All 0.5s ease-in;
 }
- 
+
 /*buttons*/
 #msform .action-button {
     width: 100px;
-    background: #2D9596;
+    background: #365486;
     font-weight: bold;
     color: white;
     border: 0 none;
     border-radius: 25px;
     cursor: pointer;
     padding: 10px 5px;
+    margin: 10px 5px;
 }
- 
 #msform .next-button {
     width: 100px;
-    background: #2D9596;
+    background: #365486;
     font-weight: bold;
     color: white;
     border: 0 none;
@@ -90,7 +92,7 @@ body {
 }
 #msform .download-button {
     width: 100px;
-    background: #2D9596;
+    background: #365486;
     font-weight: bold;
     color: white;
     border: 0 none;
@@ -98,27 +100,32 @@ body {
     cursor: pointer;
     padding: 10px 5px;
 }
+
 .url-container {
-    max-height: 400px; /* Set the maximum height of the container */
-    overflow-y: auto; /* Enable vertical scrolling */
-    overflow-x: hidden; /* Hide horizontal scrollbar */
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
     margin-top: 35px;
-  }
-/* Styles for the list container */
+    padding-left: 20px; /* Added padding for left alignment */
+}
+
 .url-list {
     list-style-type: none;
+    overflow-wrap: break-word;
     padding: 0;
-   
-  }
- 
-  /* Styles for each URL item */
-  .url-item {
+}
+
+.url-item {
+    text-align: left;
     margin-bottom: 10px;
-  }
+    word-wrap: break-word; /* Wrap long URLs */
+}
+
+
  
   /* Styles for the anchor tag */
   .url-link {
-    color: rgba(3, 3, 22, 0.637);
+    color: rgba(4, 4, 34, 0.938);
     text-decoration: underline;
     cursor: pointer;
   }
@@ -173,18 +180,18 @@ body {
     text-decoration: underline;
   }
  
- 
-#msform .next.action-button {
+  #msform .next.action-button {
     float: right; /* Position on the right */
 }
 #msform .download.action-button {
     float: left; /* Position on the left */
     margin-left: 10px; /* Add some margin for spacing */
 }
+
 #msform .action-button:hover, #msform .action-button:focus {
-    box-shadow: 0 0 0 2px white, 0 0 0 3px #2D9596;
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #365486;
 }
- 
+
 #msform .action-button-previous {
     width: 100px;
     background: #C5C5F1;
@@ -196,12 +203,12 @@ body {
     padding: 10px 5px;
     margin: 10px 5px;
 }
- 
+
 #msform .action-button-previous:hover, #msform .action-button-previous:focus {
     box-shadow: 0 0 0 2px white, 0 0 0 3px #C5C5F1;
 }
- 
- 
+
+
 .fs-title {
     font-size: 18px;
     text-transform: uppercase;
@@ -210,16 +217,15 @@ body {
     letter-spacing: 2px;
     font-weight: bold;
 }
- 
+
 .fs-subtitle {
     font-weight: normal;
     font-size: 13px;
     color: #000000;
     margin-bottom: 20px;
 }
- 
 /*progressbar*/
-#progressbar {
+ #progressbar {
     margin-bottom: 30px;
     overflow: hidden;
    
@@ -230,15 +236,15 @@ body {
     list-style-type: none;
     color: rgb(0, 0, 0);
     text-transform: uppercase;
-    font-size: 9px;
+    font-size: 10px;
     width: 33.33%;
     float: left;
     position: relative;
     letter-spacing: 1px;
+    text-align:center;
+
 }
  
-
-
 #progressbar li:before {
     content: counter(step);
     counter-increment: step;
@@ -252,33 +258,63 @@ body {
     border-radius: 25px;
     margin: 0 auto 10px auto;
 }
- 
+
  
 #progressbar li:after {
     content: '';
     width: 100%;
     height: 2px;
-    background: #f6f7f6;
+    background: white;
     position: absolute;
     left: -50%;
     top: 9px;
     z-index: -1;
 }
-
-
-
+ 
 #progressbar li:first-child:after {
-    background: #49d744;
+    content: '';
+    background: #7FC7D9;
     content: none;
 }
  
  
+#progressbar li.active:after {
+    background: #7FC7D9;
+    color: rgb(254, 223, 223);
+}
 #progressbar li.active:before, #progressbar li.active:after {
-    background: #49d744;
-    color: white;
+    background: #7FC7D9;
+    color: rgba(223, 28, 28, 0);
 }
  
- 
+.result {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  
+  .result div {
+    padding: 5px 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .result div:last-child {
+    border-bottom: none;
+  }
+  
+  .result a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .result a:hover {
+    text-decoration: underline;
+  }
+  
 .dme_link {
     margin-top: 30px;
     text-align: center;
@@ -298,4 +334,15 @@ body {
     background: #C5C5F1;
     text-decoration: none;
 }
+
+
+/* 
+#progressbar li.inactive:before {
+    background: #ffffff;
+}
+
+#progressbar li.active:before{
+    background:#ee0979;
+    color:white;
+}  */
 
